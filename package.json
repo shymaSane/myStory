@@ -1,0 +1,22 @@
+{
+  "name": "my-story",
+  "version": "1.0.0",
+  "description": "app to write and share stories ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shymaSane/myStory.git"
+  },
+  "keywords": [
+    "stories"
+  ],
+  "author": "Shyma Al Sane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shymaSane/myStory/issues"
+  },
+  "homepage": "https://github.com/shymaSane/myStory#readme"
+}
