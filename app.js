@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/users/login', (req, res) => {
+    res.render('login')
+})
+
 app.listen(port, () =>{
     console.log(`server is working on port: ${port}`)
 })
