@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 //bring routers:
 const users = require('./routes/users')
+const stories = require('./routes/stories')
 
 //handlebars middleware:
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
 
 //using routes
 app.use('/users', users)
+app.use('/', stories)
 
 app.listen(port, () =>{
     console.log(`server is working on port: ${port}`)
