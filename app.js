@@ -1,8 +1,16 @@
 const express = require('express');
 var exphbs  = require('express-handlebars');
 const path = require('path');
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:3000/my_story_users"
+
+//launch express
 const app = express();
 const port = 3000
+
+//connect mongodb:
+// MongoClient.connect(url,  { useNewUrlParser: true })
+
 
 //static files:
 app.use(express.static(path.join(__dirname + '/public')));

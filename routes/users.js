@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+
 router.get('/login', (req, res) => {
-    res.render('login')
+    res.render('./auth/login')
 })
 
 router.get('/signup', (req, res) =>{
-    res.render('signup')
+    res.render('./auth/signup')
 })
 
 module.exports = router
