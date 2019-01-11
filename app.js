@@ -19,10 +19,19 @@ app.use(express.static(path.join(__dirname + '/public')));
 const users = require('./routes/users')
 const stories = require('./routes/stories')
 
+//bring db:
+const db = require('./util/database')
+
 //handlebars middleware:
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+//database connection:
+db.execute(
+    'SELECT * FROM story'
+)
+.then(res => console.log(res))
+.catch(err => console.log(err))
 
 app.get('/', (req, res) => {
     res.render('home')
