@@ -30,7 +30,7 @@ app.set('view engine', 'handlebars');
 db.execute(
     'SELECT * FROM story'
 )
-.then(res => console.log(res))
+.then(res => console.log(res[0][0]))
 .catch(err => console.log(err))
 
 app.get('/', (req, res) => {
