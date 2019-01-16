@@ -3,12 +3,12 @@
 <div class="container">
     <div class="row">
         <div class="d-flex col-md-6 col-sm-11 m-3">
-            <img src="https://a.wattpad.com/cover/162147064-176-k190000.jpg" alt="story name" class="img-thumbnail" style="padding:0">
+            <img src="https://a.wattpad.com/cover/162147064-176-k190000.jpg" alt="story name" class="img-thumbnail d-sm-block d-none" style="padding:0">
             
             <div class="card" style="border: none !important; background-color:rgba(245, 245, 245, 0.911)">
                 <span class="bg-info rounded text-center text-white" style="width: 27px; height: 27px;">#1</span>
                 <div class="card-header pl-2 pb-0">
-                    <p class="m-0"><strong>Experiment Zero</strong></p>
+                    <p class="m-0"><strong>{{title}}</strong></p>
                     <p class="text-secondary m-0"><strong>by though</strong></p>
                     <div>
                         <ul class="nav mt-2 pd-0">
@@ -19,14 +19,11 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
+                    <p class="card-text">{{story_text}}......<a href="#" class="text-info"><srtong>read more</srtong></a>
                     </p>
                     </div>
                     <div class="card-footer text-muted">
-                    agree and disagree and rating
+                    {{genre}}
                 </div>
             </div>
         </div>

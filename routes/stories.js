@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/stories', (req, res) => {
-    res.render('./stories/stories')
-})
+const storiesController = require('../controller/stories')
+
+router.get('/stories', storiesController.getStory)
 
 module.exports = router
  
