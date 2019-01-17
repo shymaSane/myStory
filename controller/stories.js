@@ -6,12 +6,10 @@ exports.getStory = (req, res)=> {
         'SELECT * FROM story'
     )
     .then(data => {
-        data.map((story) =>{
-            const {story_id, title, story_text, image_url, genre} = story
+            const stories = data[0]
             res.render('./stories/stories', {
-                story_id, title, story_text, image_url, genre
+               stories
             })
-        })
     })
     .catch(err => console.log(err))
 }
