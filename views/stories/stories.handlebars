@@ -1,9 +1,10 @@
 
 {{> _semiNav}}
+
 <div class="container">
-    <div class="row col-md-6 d-flex">
+    <div class="row">
         {{#each stories}}
-        <div class="row">
+        <div class="col-sm-6">
             <div class="d-flex">
                 <img src="https://a.wattpad.com/cover/162147064-176-k190000.jpg" alt="story name" class="img-thumbnail d-sm-block d-none" style="padding:0">
                 
@@ -23,15 +24,13 @@
                     <div class="card-body">
                         <p class="card-text">{{this.story_text}}......<a href="#" class="text-info"><srtong>read more</srtong></a>
                         </p>
-                        </div>
-                        <div class="card-footer text-muted">
+                    </div>
+                    <div class="card-footer text-muted">
                         {{this.genre}}
                     </div>
                 </div>
-            
+            </div>
         </div>
         {{/each}}
     </div>
 </div>
-
-
