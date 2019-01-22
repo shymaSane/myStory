@@ -7,9 +7,6 @@ const path = require('path');
 const app = express();
 const port = 3000
 
-//connect mongodb:
-// MongoClient.connect(url,  { useNewUrlParser: true })
-
 
 //static files:
 app.use(express.static(path.join(__dirname + '/public')));
@@ -19,10 +16,20 @@ const users = require('./routes/users')
 const stories = require('./routes/stories')
 
 
-//handlebars middleware:
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
 
+//handlebars middleware:
+
+const hbs = exphbs.create({
+    helpers:{
+        sub_text: (story_text) => {
+            const sub = story_text.substr(0, 100)
+            console.log(sub)
+            return sub
+        }
+    }
+})
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
     res.render('home')
