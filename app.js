@@ -23,10 +23,11 @@ const hbs = exphbs.create({
     helpers:{
         sub_text: (story_text) => {
             const sub = story_text.substr(0, 100)
-            console.log(sub)
             return sub
         }
-    }
+    },
+    defaultLayout: 'main',
+    partialsDir: ['views/partials/']
 })
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
