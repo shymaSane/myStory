@@ -3,7 +3,8 @@ const router = express.Router()
 
 const storiesController = require('../controller/stories')
 
-router.get('/stories', storiesController.getStory)
+router.get('/', storiesController.getStory)
+router.get('/new', storiesController.newStory )
 
 module.exports = router
  

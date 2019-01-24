@@ -13,3 +13,7 @@ exports.getStory = (req, res)=> {
     })
     .catch(err => console.log(err))
 }
+
+exports.newStory = (req, res) => {
+    res.render('./stories/newStory')
+}

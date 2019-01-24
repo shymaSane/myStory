@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 
 //using routes
 app.use('/users', users)
-app.use('/', stories)
+app.use('/stories', stories)
 
 app.listen(port, () =>{
     console.log(`server is working on port: ${port}`)
